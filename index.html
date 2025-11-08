@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operating Systems Portfolio | Your Name</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Optional: Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">OS<span>Craft</span></div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <p class="hero-label">Operating Systems & Low-Level Engineering</p>
+            <h1>Hi, I'm <span class="accent">Asad Khilji</span>.</h1>
+            <p class="hero-text">
+                I design, debug, and optimize systems close to the hardware: kernels, schedulers, memory managers, 
+                concurrency primitives, virtualization layers, and secure OS architectures.
+            </p>
+            <div class="hero-actions">
+                <a href="#projects" class="btn primary">View OS Projects</a>
+                <a href="#contact" class="btn ghost">Get in Touch</a>
+            </div>
+            <div class="hero-tags">
+                <span>Linux Kernel</span>
+                <span>Processes & Threads</span>
+                <span>Memory Management</span>
+                <span>File Systems</span>
+                <span>Virtualization</span>
+            </div>
+        </div>
+        <div class="hero-panel">
+            <div class="stat-card">
+                <p class="stat-label">Systems Programming</p>
+                <p class="stat-value">C</p>
+            </div>
+            <div class="stat-card">
+                <p class="stat-label">Platforms</p>
+                <p class="stat-value">Linux · Unix · Windows</p>
+            </div>
+            <div class="stat-card">
+                <p class="stat-label">Focus</p>
+                <p class="stat-value">Performance · Reliability · Security</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section about">
+        <h2>About</h2>
+        <p>
+            I specialize in understanding how operating systems work under the hood: how they manage CPU time, memory,
+            devices, storage, and isolation. My work spans from building educational kernels and system utilities 
+            to profiling real-world workloads and hardening OS configurations for production environments.
+        </p>
+    </section>
+
+    <section id="skills" class="section skills">
+        <h2>Core OS Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>Processes & Scheduling</h3>
+                <ul>
+                    <li>Context switching, system calls</li>
+                    <li>Preemptive & priority scheduling</li>
+                    <li>Implementing simple schedulers</li>
+                    <li>Tracing & profiling (strace, perf)</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h3>Memory Management</h3>
+                <ul>
+                    <li>Virtual memory, paging, segmentation</li>
+                    <li>Custom allocators & slab concepts</li>
+                    <li>Address space layout, ASLR basics</li>
+                    <li>Leak & corruption debugging (valgrind)</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h3>Concurrency & Sync</h3>
+                <ul>
+                    <li>Threads, mutexes, semaphores</li>
+                    <li>Deadlock & race condition avoidance</li>
+                    <li>Lock-free & atomic operations basics</li>
+                    <li>Pthreads & std::thread</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h3>File Systems & I/O</h3>
+                <ul>
+                    <li>Inodes, directories, journaling</li>
+                    <li>Device drivers (intro-level)</li>
+                    <li>Buffered vs direct I/O</li>
+                    <li>Tools: fdisk, mkfs, iostat</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h3>Security & Isolation</h3>
+                <ul>
+                    <li>Permissions & ACLs</li>
+                    <li>Chroot, namespaces, cgroups</li>
+                    <li>Sandboxing concepts</li>
+                    <li>Basic hardening practices</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h3>Virtualization & Containers</h3>
+                <ul>
+                    <li>Hypervisors (KVM/Xen concepts)</li>
+                    <li>Docker & container runtimes</li>
+                    <li>Resource isolation & quotas</li>
+                    <li>Networking & storage integration</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section projects">
+        <h2>Highlighted OS Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>EduKernel: Minimal Teaching OS</h3>
+                <p>
+                    Built a tiny 32-bit OS with bootloader, IDT/GDT setup, simple scheduler and basic syscall interface.
+                    Focused on explaining how control moves from firmware to kernel.
+                </p>
+                <ul>
+                    <li>C, NASM</li>
+                    <li>QEMU, GRUB</li>
+                    <li>Interrupts & privilege levels</li>
+                </ul>
+                <a href="#" class="project-link">View Source</a>
+            </div>
+            <div class="project-card">
+                <h3>Custom MLFQ Scheduler</h3>
+                <p>
+                    Implemented a Multi-Level Feedback Queue scheduler variant inside an existing teaching OS to improve 
+                    interactive responsiveness and analyze starvation.
+                </p>
+                <ul>
+                    <li>Scheduling policies & metrics</li>
+                    <li>Context switch optimization</li>
+                    <li>Extensive benchmarking</li>
+                </ul>
+                <a href="#" class="project-link">Read Case Study</a>
+            </div>
+            <div class="project-card">
+                <h3>Memory Profiler for C Programs</h3>
+                <p>
+                    Developed a lightweight LD_PRELOAD-based tool to log allocations, detect leaks, and visualize heap usage
+                    patterns across long-running services.
+                </p>
+                <ul>
+                    <li>Dynamic linking hooks</li>
+                    <li>Heap & stack inspection</li>
+                    <li>Performance-aware instrumentation</li>
+                </ul>
+                <a href="#" class="project-link">Explore Project</a>
+            </div>
+            <div class="project-card">
+                <h3>Containerized Sandbox Environment</h3>
+                <p>
+                    Designed a secure sandbox using Linux namespaces, cgroups, and seccomp to isolate untrusted workloads
+                    with minimal overhead.
+                </p>
+                <ul>
+                    <li>Security & isolation</li>
+                    <li>Kernel capabilities</li>
+                    <li>DevOps & observability</li>
+                </ul>
+                <a href="#" class="project-link">View Architecture</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="section experience">
+        <h2>Experience</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>Systems Engineer Intern @ Unik International</h3>
+                <p class="timeline-date">Jun 2024 – Aug 2024</p>
+                <p>
+                    Tuned Linux kernel parameters, improved I/O throughput by 18%, and built debug tooling to trace system calls
+                    for production microservices.
+                </p>
+            </div>
+            <div class="timeline-item">
+                <h3>Academic Projects & Research at Montclair State University</h3>
+                <p class="timeline-date">Jan 2024 - Present</p>
+                <p>
+                    Exploring microkernel vs monolithic architectures, fault isolation, and performance of different page 
+                    replacement policies under real workloads.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section contact">
+        <h2>Contact</h2>
+        <p>
+            Interested in collaborating, hiring, or discussing OS internals? Reach out:
+        </p>
+        <div class="contact-info">
+            <p><strong>Email:</strong> khiljiasad2@gmail.com</p>
+            <p><strong>GitHub:</strong> github.com/asad-khilji</p>
+            <p><strong>LinkedIn:</strong> linkedin.com/in/mohammad-asad-khilji/</p>
+        </div>
+        <form class="contact-form" action="https://formsubmit.co/khiljiasad2@gmail.com">
+            <div class="form-row">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+            </div>
+            <textarea rows="4" placeholder="Your message about systems, OS, or low-level projects..." required></textarea>
+            <button type="submit" class="btn primary" disabled>
+                Send Message 
+            </button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <p>© <span id="year"></span> Asad Khilji — OS & Systems Engineering Portfolio.</p>
+    </footer>
+
+    <script>
+        // Set current year in footer without external JS
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
